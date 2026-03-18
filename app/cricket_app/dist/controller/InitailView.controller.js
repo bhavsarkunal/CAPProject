@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller","sap/ui/core/BusyIndicator"],(e,o)=>{"use strict";return e.extend("com.cricketcap.cricketapp.controller.InitailView",{onInit(){o.show();var e=this.getOwnerComponent().getModel();e.read("/IndianTeam",{success:function(e){var n=new sap.ui.model.json.JSONModel(e.results);this.getOwnerComponent().setModel(n,"oJsonModel");o.hide()}.bind(this),error:function(e){console.log(e);o.hide()}})}})});
+//# sourceMappingURL=InitailView.controller.js.map

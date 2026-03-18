@@ -1,0 +1,30 @@
+<mvc:View controllerName="com.cricketcap.cricketapp.controller.InitailView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Table items="{oJsonModel>/}">
+            <columns>
+                <Column >
+                    <Label text="Name"/>
+                </Column>
+                <Column >
+                    <Label text="Player No"/>
+                </Column>
+                <Column >
+                    <Label text="Age"/>
+                </Column>
+                <Column >
+                    <Label text="Grade"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem >
+                    <Text text="{oJsonModel>NAME}"/>
+                    <Text text="{oJsonModel>PLAYERNO}"/>
+                    <Text text="{oJsonModel>AGE}"/>
+                    <Text text="{oJsonModel>GRADE}"/>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>
