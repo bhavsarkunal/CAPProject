@@ -1,0 +1,14 @@
+###
+GET http://localhost:4004/odata/v4/main/IndianTeam
+
+###
+POST http://localhost:4004/odata/v4/main/IndianTeam
+Content-Type: application/json
+
+{
+"ID": "12",
+"NAME" : "Mayur Bhavsar",
+"PLAYERNO" : "45",
+"AGE" : "27",
+"GRADE" : "A"
+}

@@ -1,6 +1,7 @@
 {
   "version": "0.2.0",
   "configurations": [
+
     {
       "name": "cds serve",
       "request": "launch",
@@ -15,6 +16,23 @@
       "skipFiles": [
         "<node_internals>/**"
       ]
-    }
+    },
+    {
+      "name": "cds watch",
+      "request": "launch",
+      "type": "node",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npx",
+      "args": [
+        "cds",
+        "watch",
+        "--profile",
+        "hybrid"
+      ],
+      "console": "integratedTerminal",
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
   ]
 }
