@@ -14,8 +14,9 @@ sap.ui.define([
            oModel.read("/IndianTeam", {
             success: function(data){
                 // console.log(data)
+                var dataResults = data.results;
                 console.log(data);
-                var oJsonModel = new sap.ui.model.json.JSONModel(data.results);
+                var oJsonModel = new sap.ui.model.json.JSONModel(dataResults);
                 this.getOwnerComponent().setModel(oJsonModel, "oJsonModel");
                 BusyIndicator.hide();
             }.bind(this),
