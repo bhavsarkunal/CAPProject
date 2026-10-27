@@ -15,9 +15,10 @@ sap.ui.define([
             success: function(data){
                 // console.log(data)
                 var dataResults = data.results;
-                console.log(data);
                 var oJsonModel = new sap.ui.model.json.JSONModel(dataResults);
                 this.getOwnerComponent().setModel(oJsonModel, "oJsonModel");
+                console.log(data);
+                sap.m.MessageToast.show("Data loaded and displayed")
                 BusyIndicator.hide();
             }.bind(this),
             error: function (oError) {
